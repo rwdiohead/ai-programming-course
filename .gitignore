@@ -19,3 +19,20 @@ Thumbs.db
 
 .vscode/
 .idea
+
+bin/
+obj/
+
+*.user
+*.userosscache
+*.suo
+
+appsettings.Development.json
+appsettings.local.json
+
+*.exe
+*.dll
+
+vendor/
+
+go.work
