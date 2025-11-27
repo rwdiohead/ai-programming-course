@@ -1,8 +1,17 @@
+using LegacyApi.Repositories;
+using LegacyApi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Registrar el repositorio
+builder.Services.AddSingleton<IOrderRepository, MockOrderRepository>();
+
+// Registrar el servicio
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 var app = builder.Build();
 
